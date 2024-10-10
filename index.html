@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christine Joy S. Alutaya</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: black;
-            color: white;
+            font-family: 'Lora', serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: blue;
-            padding: 10px;
+            background-color: #007acc;
+            padding: 20px;
             text-align: center;
+            color: white;
         }
         nav {
             margin: 20px 0;
@@ -26,25 +27,61 @@
             text-decoration: none;
             margin: 0 15px;
             padding: 10px 15px;
-            border: 2px solid white;
-            transition: background 0.3s, color 0.3s;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s, border 0.3s;
         }
         nav a:hover {
             background: white;
-            color: black;
+            color: #007acc;
+            border: 2px solid #007acc;
         }
         section {
             margin: 20px;
             padding: 20px;
-            border: 1px solid white;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #007acc;
         }
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: blue;
-            position: fixed;
+            padding: 15px;
+            background-color: #007acc;
+            color: white;
+            position: relative;
             width: 100%;
             bottom: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            margin-top: 5px;
+        }
+        input[type="submit"] {
+            margin-top: 10px;
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #005f99;
         }
     </style>
 </head>
@@ -83,12 +120,12 @@
     <section id="contact">
         <h2>Contact</h2>
         <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
             <input type="submit" value="Send">
         </form>
     </section>
